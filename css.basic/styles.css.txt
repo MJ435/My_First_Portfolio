@@ -1,44 +1,35 @@
-/* base.css */
+/* Apply Flexbox to body and main */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
 }
 
-p {
-    line-height: 1.6;
-    margin: 0 0 1em;
+/* Flex properties for article and aside */
+article {
+    flex: 2;
+    overflow-y: auto;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+aside {
+    flex: 1;
+    overflow-y: auto;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Optional: Basic styling for header and footer */
+header, footer {
+    background-color: #f8f9fa;
     padding: 20px;
+    border: 1px solid #e0e0e0;
 }
 
-header {
-    background: #f8f9fa;
-    padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-footer {
-    background: #f8f9fa;
-    padding: 10px 0;
-    border-top: 1px solid #e0e0e0;
-    text-align: center;
+/* Optional: Container padding */
+.container {
+    padding: 20px;
 }
